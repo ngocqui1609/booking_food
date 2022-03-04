@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useCallback } from "react";
+import React, { useContext} from "react";
 import { itemContext } from "../App";
 import { useHistory } from "react-router-dom";
 var store = require("store");
@@ -14,13 +14,7 @@ function Cart() {
   const btnPopup = () => {
     document.getElementById("clrCart").classList.add("vs");
   };
-  const calcAmt = useCallback(() => {
-    iL.method({ type: "totalCost" });
-  }, [iL]);
 
-  useEffect(() => {
-    calcAmt();
-  }, [calcAmt]);
 
   const clearCart = () => {
     iL.method({ type: "clearCart" });

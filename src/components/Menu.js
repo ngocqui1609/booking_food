@@ -17,7 +17,7 @@ function Menu() {
     const scrolling = () => {
       let current = window.scrollY;
       const catBar = document.getElementById("categoryBar");
-      console.log(prev, current, "p", "c");
+      // console.log(prev, current, "p", "c");
       if (prev > current && current < 10) {
         if (catBar) {
           catBar.style.top = "85px";
